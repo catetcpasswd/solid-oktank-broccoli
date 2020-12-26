@@ -49,7 +49,7 @@ export default function CreatePost({
       await API.graphql({
         query: createPost,
         variables: { input: postInfo },
-  //      authMode: 'AMAZON_COGNITO_USER_POOLS'
+//        authMode: 'AMAZON_COGNITO_USER_POOLS'
       });
       const { username } = await Auth.currentAuthenticatedUser()
       updatePosts([...posts, { ...postInfo, image: formState.file, owner: username }]);
@@ -69,7 +69,7 @@ export default function CreatePost({
   return (
     <div className={containerStyle}>
       <input
-        placeholder="Post name"
+        placeholder="Name"
         name="name"
         className={inputStyle}
         onChange={onChangeText}

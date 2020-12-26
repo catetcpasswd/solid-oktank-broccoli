@@ -12,8 +12,7 @@ export default function Posts({
         posts.map(post => (
           <Link to={`/post/${post.id}`} className={linkStyle} key={post.id}>
             <div key={post.id} className={postContainer}>
-              <h2 className={postTitleStyle}>{post.name}</h2>
-              <h2 className={postTitleStyle}>{post.location}</h2>
+              <h2 className={postTitleStyle}>{post.name} in {post.location}</h2>
               <img alt="post" className={imageStyle} src={post.image} />
             </div>
           </Link>
